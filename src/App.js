@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import shortid from "shortid";
 // import Section from "components/Section";
 import FormContact from "components/FormContact";
@@ -16,12 +16,6 @@ function App () {
   ]);
   
   const [filter , setFilter] = useState('');
-
-  useEffect(() => { 
-    console.log('Змонтувалось');
-    const contactJson = localStorage.getItem('contacts');
-    const contactParce = JSON.parse(contactJson);
-  },[]);
 
    const addContact = data => { 
     const { name,number } = data;
